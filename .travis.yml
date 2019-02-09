@@ -9,6 +9,7 @@ python:
       dist: xenial
       sudo: true
 
+
 # Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: pip install -U tox-travis
 
@@ -28,4 +29,4 @@ deploy:
   on:
     tags: true
     repo: notebooktoall/notebooktoall
-    python: 3.7
+    python: 3.6
