@@ -8,5 +8,5 @@ Sphinx==1.8.4
 twine==1.12.1
 pytest==4.2.0
 pytest-runner==4.2
-nbconvert==5.4.0
+nbconvert==5.4.1
 requests==2.21.0
