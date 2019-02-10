@@ -5,7 +5,7 @@ Contributing
 ============
 
 Contributions are welcome, and they are greatly appreciated! Every little bit
-helps, and credit will always be given.
+helps.
 
 You can contribute in many ways:
 
@@ -19,7 +19,7 @@ Report bugs at https://github.com/notebooktoall/notebooktoall/issues.
 
 If you are reporting a bug, please include:
 
-* Your operating system name and version.
+* Your operating system name and version, if applicable.
 * Any details about your local setup that might be helpful in troubleshooting.
 * Detailed steps to reproduce the bug.
 
@@ -39,9 +39,7 @@ Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
 notebooktoall could always use more documentation, whether as part of the
-official notebooktoall docs, in docstrings, or even on the web in blog posts,
-articles, and such.
-
+official notebooktoall docs, in docstrings, or even on the web in blog posts.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
@@ -102,7 +100,7 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
-3. The pull request should work for Python 2.7, 3.4, 3.5 and 3.6, and for PyPy. Check
+3. The pull request should work for Python 3.6 and for PyPy. Check
    https://travis-ci.org/notebooktoall/notebooktoall/pull_requests
    and make sure that the tests pass for all supported Python versions.
 
