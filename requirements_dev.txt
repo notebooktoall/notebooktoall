@@ -10,4 +10,5 @@ pytest==4.2.0
 pytest-runner==4.2
 nbconvert==5.4.1
 requests==2.21.0
+pandoc==1.0.2
 coveralls==1.5.1
