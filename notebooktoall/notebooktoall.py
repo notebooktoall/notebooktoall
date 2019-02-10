@@ -29,7 +29,7 @@ try:
     (body, resources) = html_exporter.from_notebook_node(jake_notebook)
 
     write_file = FilesWriter()
-    write_file.write(output=body, resources=resources, notebook_name="mynb")
+    write_file.write(output=body, resources=resources, notebook_name="mynb1")
 
 
 # TODO
