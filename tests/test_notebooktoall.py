@@ -2,11 +2,9 @@
 # -*- coding: utf-8 -*-
 
 """Tests for `notebooktoall` package."""
-
 import pytest
 import requests
 import os
-
 from notebooktoall import notebooktoall
 
 my_url = "http://jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb"

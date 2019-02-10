@@ -35,6 +35,5 @@ def build_files(
         (body, resources) = py_exporter.from_notebook_node(jake_notebook)
         write_file = FilesWriter()
         write_file.write(output=body, resources=resources, notebook_name=notebook_name)
-
     except Exception as e:
         print(f"There was a problem exporting or writing: {e}")
