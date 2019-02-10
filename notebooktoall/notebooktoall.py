@@ -3,8 +3,7 @@ import nbformat
 from traitlets.config import Config
 
 # 1. Import the exporter
-from nbconvert import HTMLExporter
-from nbconvert import PythonExporter
+from nbconvert import HTMLExporter, PythonExporter, RSTExporter
 from nbconvert.writers import FilesWriter
 
 def build_files(
@@ -39,6 +38,8 @@ def exper(exps, nb_node, file_name):
             exporter = HTMLExporter()
         elif exp == "py":
             exporter = PythonExporter()
+        elif exp == 'rst':
+            exporter = RSTExporter()
         (body, resources) = exporter.from_notebook_node(nb_node)
         write_file = FilesWriter()
         write_file.write(output=body, resources=resources, notebook_name=file_name)

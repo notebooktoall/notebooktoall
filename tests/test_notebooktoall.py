@@ -18,13 +18,22 @@ def build_file():
 
     notebooktoall.build_files(
         url=my_url,
-        notebook_name=my_note
+        notebook_name=my_note,
+        exports=['html', 'py', 'rst']
     )
 
-def test_ouptuts_html_file(build_file):
-    """Does created html file exist?"""
+def test_outputs_html_file(build_file):
+    """Does html file exist?"""
     assert os.path.exists(f'{my_note}.html')
 
-def test_ouptuts_py_file(build_file):
-    """Does created pyton file exist?"""
+def test_outputs_py_file(build_file):
+    """Does pyton file exist?"""
     assert os.path.exists(f'{my_note}.py')
+
+def test_outputs_rst_file(build_file):
+    """Does rst file exist?"""
+    assert os.path.exists(f'{my_note}.rst')
+
+#def test_ouptuts_py_file(build_file):
+#    """Does markdown file exist?"""
+#    assert os.path.exists(f'{my_note}.md')
