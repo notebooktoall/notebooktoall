@@ -9,17 +9,24 @@ import os
 
 from notebooktoall import notebooktoall
 
+my_url = "http://jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb"
+# test notebook address
+my_note = "my_notebook"
+# base name of converted files
 
-#@pytest.fixture
-#def import_export():
-#    """Sample pytest fixture.
+@pytest.fixture
+def build_file():
+    """test fixture to call function to create files from notebook"""
 
-#    See more at: http://doc.pytest.org/en/latest/fixture.html
-#    """
-    # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
+    notebooktoall.build_files(
+        url=my_url,
+        notebook_name=my_note
+    )
 
+def test_ouptuts_html_file(build_file):
+    """Does created html file exist?"""
+    assert os.path.exists(f'{my_note}.html')
 
-def test_ouptuts_html_file():
-    """Sample pytest test function with the pytest fixture as an argument."""
-
-    assert os.path.exists('mynb.html')
+def test_ouptuts_py_file(build_file):
+    """Does created pyton file exist?"""
+    assert os.path.exists(f'{my_note}.py')
