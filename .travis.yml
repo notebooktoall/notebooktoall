@@ -3,6 +3,7 @@
 language: python
 python:
   - 3.6
+  - 3.5
 
 # Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: pip install -U tox-travis
@@ -14,6 +15,7 @@ script: tox
 # create the Github repo and add it to Travis, run the
 # following command to finish PyPI deployment setup:
 # $ travis encrypt --add deploy.password
+
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
