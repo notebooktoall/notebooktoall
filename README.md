@@ -1,4 +1,8 @@
-[![Build Status](https://travis-ci.org/notebooktoall/notebooktoall.svg?branch=master)](https://travis-ci.org/notebooktoall/notebooktoall) [![Coverage Status](https://coveralls.io/repos/github/notebooktoall/notebooktoall/badge.svg?branch=master)](https://coveralls.io/github/notebooktoall/notebooktoall?branch=master)
+[![Build Status](https://travis-ci.org/notebooktoall/notebooktoall.svg?branch=master)](https://travis-ci.org/notebooktoall/notebooktoall) [![Coverage Status](https://coveralls.io/repos/github/notebooktoall/notebooktoall/badge.svg?branch=master)](https://coveralls.io/github/notebooktoall/notebooktoall?branch=master) [![Documentation Status](https://readthedocs.org/projects/pyup/badge/?version=latest)](https://pyup.readthedocs.io/en/latest/?badge=latest)
+[![Updates](https://pyup.io/repos/github/notebooktoall/notebooktoall/shield.svg)](https://pyup.io/repos/github/notebooktoall/notebooktoall/)
+<img src=https://img.shields.io/pypi/l/:notebooktoall.svg>
+<img src=https://img.shields.io/pypi/v/:notebooktoall.svg>
+<img src=https://img.shields.io/pypi/pyversions/:notebooktoall.svg>
 
 # NotebookToAll
 The coolest way to turn a Jupyter Notebook into sharable files. 
