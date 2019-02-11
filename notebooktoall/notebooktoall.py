@@ -1,46 +1,57 @@
 from urllib.request import urlopen
 import nbformat
 from traitlets.config import Config
-
-# 1. Import the exporter
-from nbconvert import HTMLExporter, PythonExporter, RSTExporter
+from nbconvert import HTMLExporter, PythonExporter
 from nbconvert.writers import FilesWriter
 
-def build_files(
-    url="http://jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb",
-    notebook_name="my_converted_nb",
-    exports=["html", "py"]
-):
+def get_notebooks(url):
+    """
+    gets a Jupyter notebook from a url and converts to a NotebookNode object
+    url (str): url of notebooks
+    returns: NotebookNode object
+    """
 
     try:
         response = urlopen(url).read().decode()
+        notebook_node = nbformat.reads(response, as_version=4)
+        return notebook_node
     except Exception as e:
-        print(f"There was a problem: {e}")
+        print(f"There was a problem exporting the notebook: {e}")
+
+
+
+def write_files(export_list, nb_node, file_name):
+    """
+    export and write files from a notebook node
+    export_list(list of strings): name of valid nbconvert exporters
+    nb_node(nbformat node object): notebook to be my_converted
+    file_name(str): base name of file to be written
+    returns: None
+    """
 
     try:
-        # Read a notebook from a string and return the NotebookNode object
-        nb = nbformat.reads(response, as_version=4)
-        exper(exports, nb, notebook_name)
+        # export and write file.
+        for export in export_list:
+            if export == "html":
+                exporter = HTMLExporter()
+            elif export == "py":
+                exporter = PythonExporter()
+
+            (body, resources) = exporter.from_notebook_node(nb_node)
+            write_file = FilesWriter()
+            write_file.write(output=body, resources=resources, notebook_name=file_name)
     except Exception as e:
-        print(f"There was a problem exporting or writing: {e}")
+        print(f"There was a problem exporting writing the file(s): {e}")
+
     return None
 
-def exper(exps, nb_node, file_name):
-    """
-    export and write files
-    exports(list of strings): name of valid nbconvert exporters
-    """
-    # TODO: Check that exports are valid types, let input valid types
 
-    # export and write file.
-    for exp in exps:
-        if exp == "html":
-            exporter = HTMLExporter()
-        elif exp == "py":
-            exporter = PythonExporter()
-        elif exp == 'rst':
-            exporter = RSTExporter()
-        (body, resources) = exporter.from_notebook_node(nb_node)
-        write_file = FilesWriter()
-        write_file.write(output=body, resources=resources, notebook_name=file_name)
-    return None
+url="http://jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb",
+notebook_name="my_converted_nb",
+export_list=["html", "py"]
+
+nb_node = get_notebooks(url)
+write_files(export_list, nb_node, notebook_name)
+
+# TODO: Check that export_list types are valid types
+# possible feature: return the created objects
