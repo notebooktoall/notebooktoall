@@ -4,22 +4,22 @@ from traitlets.config import Config
 from nbconvert import HTMLExporter, PythonExporter
 from nbconvert.writers import FilesWriter
 
-def get_notebooks(url):
+def get_notebooks(ipynb_file):
     """
-    gets a Jupyter notebook from a url and converts to a NotebookNode object
-    url (str): url of notebooks
+    gets a Jupyter notebook from a url or directory and converts to a NotebookNode object
+    ipynb_file (str): url or path of notebook
     returns: NotebookNode object
     """
 
     try:
-        response = urlopen(url).read().decode()
-        notebook_node = nbformat.reads(response, as_version=4)
-        print(type(notebook_node))
+        if "http" in ipynb_file:
+            ipynb_file = urlopen(ipynb_file).read().decode()
+            notebook_node = nbformat.reads(ipynb_file, as_version=4)
+        else:
+            notebook_node = nbformat.read(ipynb_file, as_version=4)
         return notebook_node
     except Exception as e:
         print(f"There was a problem exporting the notebook: {e}")
-
-
 
 def write_files(export_list, nb_node, file_name):
     """
@@ -47,25 +47,25 @@ def write_files(export_list, nb_node, file_name):
     return None
 
 def transform_notebooks(
-    url="http://jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb",
-    file_name="my_converted_nb",
+    ipynb_file="http://jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb",
     export_list=["html", "py"]
     ):
 
     """
     Main module method. Creates transformed files on the operating system
     Params:
-    url (str): url of Jupyter notebook to be converted
-    notebook_name(str): base name of file(s) to be created
+    ipynb_file (str): url or path of Jupyter notebook to be converted
     export_list(list of strs): optons: html, py
     Returns: None
 
     """
+    file_name = ipynb_file.rsplit('/',1)[-1]
+    file_name = file_name[:file_name.rfind('.')]
 
-    nb_node = get_notebooks(url)
+    nb_node = get_notebooks(ipynb_file)
     write_files(export_list, nb_node, file_name)
     return None
 
 # TODO:
-# Check that url and export_list types are valid
+# Check that ipynb and export_list types are valid
 # possible feature: return the created objects or a message
