@@ -4,10 +4,11 @@
 Contributing
 ============
 
-Contributions are welcome, and they are greatly appreciated! Every little bit
-helps.
+Contributions are welcome and greatly appreciated!
 
 You can contribute in many ways:
+
+Please ensure you follow our Code of Conduct.
 
 Types of Contributions
 ----------------------
