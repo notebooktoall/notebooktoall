@@ -20,22 +20,17 @@ notebooktoall
 
 
 
-The coolest way to turn a Jupyter Notebook into sharable stufff.
+The coolest way to turn a Jupyter Notebook into sharable stuff.
 
 
 * Free software: GNU General Public License v3
 * Documentation: https://notebooktoall.readthedocs.io.
 
 
-Features
---------
-
-* TODO
-
 Credits
 -------
 
-This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+This package used the Cookiecutter_ `audreyr/cookiecutter-pypackage`_ project template.
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
