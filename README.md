@@ -7,12 +7,14 @@
 # NotebookToAll
 The coolest way to turn a Jupyter Notebook into sharable files. 
 
-Turn your Jupyter Notebook into a .py executable file and an .html file with a one-line command. You can create both or either file type at the same time! Under the hood, this package uses Jupyter nbconvert.
+Turn your Jupyter Notebook into a .py executable file and an .html file with a one-line command. You can create both or either file type at the same time! Under the hood, this package uses Jupyter nbconvert. 
+
+nbconvert is great for command line transformations, but it takes a bit of work to use in a program. NotebookToAll to the rescue.
 
 # Quick Start
 
 ## Install
-Install from PyPI with pip. 
+Install from PyPI. 
 `pip install notebooktoall`
 
 ## Use
@@ -22,17 +24,12 @@ Make sure your notebook doesn't have magic commands in it if you want to create 
 ```
 from notebooktoall.transform import transform_notebooks
 
-transform_notebooks(
-    url="my_jupyter_notebook.ipynb",
-    file_name="my_desired_output_file_base_name",
-    export_list=["html", "py"]
-    )
+transform_notebooks(ipynb_file="my_jupyter_notebook.ipynb", export_list=["html", "py"])
 
 ```
 
-Run your code and your .html and .py files should appear be in your current working directory.
+Run your code and your .html and .py files should appear in your current working directory.
 
-See the full docs at ReadTheDocs.
+You can pass a Jupyter notebook url to transform_notebooks.
 
-Get involved! We welcome issues, documentation and code improvements. See contributing. 
-
+See the full docs at [ReadTheDocs](https://notebooktoall.readthedocs.io/en/latest/index.html).
