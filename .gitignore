@@ -104,6 +104,9 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-# images and html files
+# files created by tests
 *.png
 *.html
+XKCD_plots.py
+my_tst.py
+my_file.py
