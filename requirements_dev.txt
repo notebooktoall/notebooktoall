@@ -13,3 +13,4 @@ requests==2.21.0
 coveralls==1.5.1
 bump2version==0.5.10
 pytest-cov==2.6.1
+nbformat==4.4.0
