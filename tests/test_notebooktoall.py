@@ -5,7 +5,7 @@
 import pytest
 import os
 import nbformat
-from notebooktoall import notebooktoall as nba
+import notebooktoall.transform as nba
 
 my_url = "http://jakevdp.github.com/downloads/notebooks/XKCD_plots.ipynb"
 # default test notebook address

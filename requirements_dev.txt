@@ -11,4 +11,4 @@ pytest-runner==4.2
 nbconvert==5.4.1
 requests==2.21.0
 coveralls==1.5.1
-pandas==0.24.1
+bump2version==0.5.10
