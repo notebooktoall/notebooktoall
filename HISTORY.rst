@@ -7,7 +7,7 @@ History
 
 * First release on PyPI.
 
-0.1.0 (2019-02-11)
+0.1.1 (2019-02-11)
 _________________
 
 * Add Code of Conduct
