@@ -1,6 +1,6 @@
 pip==19.0.2
 incremental==17.5.0
-wheel==0.32.3
+wheel==0.33.0
 flake8==3.7.5
 tox==3.7.0
 coverage==4.5.2
