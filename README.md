@@ -12,14 +12,15 @@ Turn your Jupyter Notebook into a .py executable file and an .html file with a o
 # Quick Start
 
 ## Install
-Install from PyPI with pip.
+Install from PyPI with pip. 
+`pip install notebooktoall`
 
 ## Use
 
 Make sure your notebook doesn't have magic commands in it if you want to create an executable .py script.
 
 ```
-import notebooktoall from notebooktoall as nb
+from notebooktoall.transform import transform_notebooks
 
 transform_notebooks(
     url="my_jupyter_notebook.ipynb",
