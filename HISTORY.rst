@@ -26,3 +26,9 @@ _________________
 
 * Add missing dependency
 * Update ReadTheDocs usage
+
+0.1.3 (2019-02-11)
+_________________
+
+* Improve rst doc formatting
+* Wheel

@@ -5,7 +5,7 @@
 ![versions](https://img.shields.io/pypi/pyversions/notebooktoall.svg?style=flat)
 
 
-# NotebookToAll
+#NotebookToAll
 The coolest way to turn a Jupyter Notebook into sharable files.
 
 Turn your Jupyter Notebook into a .py executable file and an .html file with a one-line command. You can create both or either file type at the same time! Under the hood, this package uses Jupyter nbconvert.
