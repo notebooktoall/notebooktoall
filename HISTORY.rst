@@ -42,3 +42,8 @@ _________________
 _________________
 
 * Add requirements to setup.py
+
+0.1.6 (2019-02-11)
+_________________
+
+* One requirements file
