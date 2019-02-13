@@ -36,4 +36,9 @@ _________________
 0.1.4 (2019-02-11)
 _________________
 
-* nbconvert and ipython loading 
+* Nada
+
+0.1.5 (2019-02-11)
+_________________
+
+* Add requirements to setup.py
