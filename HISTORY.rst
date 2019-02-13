@@ -26,3 +26,29 @@ _________________
 
 * Add missing dependency
 * Update ReadTheDocs usage
+
+0.1.3 (2019-02-11)
+_________________
+
+* Improve rst doc formatting
+* Wheel
+
+0.1.4 (2019-02-11)
+_________________
+
+* Nada
+
+0.1.5 (2019-02-11)
+_________________
+
+* Add requirements to setup.py
+
+0.1.6 (2019-02-11)
+_________________
+
+* One requirements file
+
+0.1. (2019-02-11)
+_________________
+
+* Fix setup.py

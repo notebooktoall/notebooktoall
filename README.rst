@@ -13,13 +13,10 @@ NotebookToAll
         :target: https://notebooktoall.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-
 .. image:: https://pyup.io/repos/github/notebooktoall/notebooktoall/shield.svg
      :target: https://pyup.io/repos/github/notebooktoall/notebooktoall/
      :alt: Updates
 
-
-# NotebookToAll
 
 The coolest way to turn a Jupyter Notebook into sharable files.
 
@@ -27,37 +24,45 @@ Turn your Jupyter Notebook into a .py executable file and an .html file with a o
 
 nbconvert is great for command line transformations, but it takes a bit of work to use in a program. NotebookToAll to the rescue.
 
-# Quick Start
+Quick Start
+-----------
 
-## Install
+Install
+_______
+
 Install from PyPI.
 `pip install notebooktoall`
 
-## Use
+Use
+___
 
-Make sure your notebook doesn't have magic commands in it if you want to create an executable .py script.
+Make sure your notebook doesn't have magic commands in it if you want to create an executable .py script.::
 
-```
-from notebooktoall.transform import transform_notebooks
 
-transform_notebooks(ipynb_file="my_jupyter_notebook.ipynb", export_list=["html", "py"])
+    from notebooktoall.transform import transform_notebooks
 
-```
+    transform_notebooks(ipynb_file="my_jupyter_notebook.ipynb", export_list=["html", "py"])
+
+
 
 Run your code and your .html and .py files should appear in your current working directory.
 
 You can pass a Jupyter notebook url to transform_notebooks().
 
-## License
+License
+_______
 
 * Free software: GNU General Public License v3
 
-## Docs
+Docs
+____
 
 * Documentation: https://notebooktoall.readthedocs.io.
 
 
-## Credits:
+Credits:
+________
+
 The Cookiecutter_ `audreyr/cookiecutter-pypackage`_ project template.
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
