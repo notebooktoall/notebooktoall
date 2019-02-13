@@ -32,3 +32,8 @@ _________________
 
 * Improve rst doc formatting
 * Wheel
+
+0.1.4 (2019-02-11)
+_________________
+
+* nbconvert and ipython loading 
