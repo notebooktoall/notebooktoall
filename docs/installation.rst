@@ -8,7 +8,7 @@ Installation
 Stable release
 --------------
 
-To install notebooktoall, run this command in your terminal:
+To install NotebookToAll, run this command in your terminal:
 
 .. code-block:: console
 

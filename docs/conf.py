@@ -129,7 +129,7 @@ latex_elements = {
 # [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'notebooktoall.tex',
-     u'notebooktoall Documentation',
+     u'NotebookToAll Documentation',
      u'Jeff Hale', 'manual'),
 ]
 
@@ -140,7 +140,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     (master_doc, 'notebooktoall',
-     u'notebooktoall Documentation',
+     u'NotebookToAll Documentation',
      [author], 1)
 ]
 
@@ -152,7 +152,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
     (master_doc, 'notebooktoall',
-     u'notebooktoall Documentation',
+     u'NotebookToAll Documentation',
      author,
      'notebooktoall',
      'One line description of project.',
