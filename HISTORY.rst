@@ -14,7 +14,6 @@ _________________
 * Improve docs
 * Fix badges
 * Cover multiple python versions
-* Add code coverage
 
 0.1.1 (2019-02-11)
 _________________
@@ -48,7 +47,12 @@ _________________
 
 * One requirements file
 
-0.1. (2019-02-11)
+0.1.7 (2019-02-11)
 _________________
 
 * Fix setup.py
+
+0.1.8 (2019-02-12)
+_________________
+
+* Update coverage

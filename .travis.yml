@@ -19,16 +19,6 @@ install: pip install -U tox-travis
 # Command to run tests, e.g. python setup.py test
 script:
   - tox
-  
-# if decide to set up multiple testing enviroments
-# see https://jsatt.com/blog/using-tox-with-travis-ci-to-test-django-apps/
-# env:
-#  - TOXENV=   #make environments in tox.ini
-
-# Assuming you have installed the travis-ci CLI tool, after you
-# create the Github repo and add it to Travis, run the
-# following command to finish PyPI deployment setup:
-# $ travis encrypt --add deploy.password
 
 deploy:
   provider: pypi
