@@ -22,9 +22,9 @@ Install from PyPI.
 ## Use
 
 ```
-from notebooktoall.transform import transform_notebooks
+from notebooktoall.transform import transform_notebook
 
-transform_notebooks(ipynb_file="my_jupyter_notebook.ipynb", export_list=["html", "py"])
+transform_notebook(ipynb_file="my_jupyter_notebook.ipynb", export_list=["html", "py"])
 ```
 
 Run your code and an .html file and an executable .py file will appear in your current working directory. Use and share!

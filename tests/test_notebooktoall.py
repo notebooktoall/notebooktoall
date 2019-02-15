@@ -22,9 +22,9 @@ my_file_types = ['html', 'py']
 
 
 # Integration tests
-def test_transform_notebooks():
+def test_transform_notebook():
     """Test that output files are created when main function is called."""
-    nba.transform_notebooks(ipynb_file=my_url, export_list=my_file_types)
+    nba.transform_notebook(ipynb_file=my_url, export_list=my_file_types)
     file_name = my_url.rsplit('/', 1)[-1]
     file_base = file_name[:file_name.rfind('.')]
 
@@ -34,7 +34,7 @@ def test_transform_notebooks():
     """Check .py file exists from url."""
     assert os.path.exists(f'{file_base}.py')
 
-    nba.transform_notebooks(ipynb_file=my_file, export_list=my_file_types)
+    nba.transform_notebook(ipynb_file=my_file, export_list=my_file_types)
     file_name = my_file.rsplit('/', 1)[-1]
     file_base = file_name[:file_name.rfind('.')]
 
@@ -48,20 +48,31 @@ def test_transform_notebooks():
 # Unit tests
 def test_get_notebook():
     """Should return a NotebookNode object from a url."""
-    my_nb_node = nba.get_notebooks(my_url)
+    my_nb_node = nba.get_notebook(my_url)
     assert type(my_nb_node) is nbformat.notebooknode.NotebookNode
 
     """Should return a NotebookNode object from a path."""
-    my_nb_node = nba.get_notebooks(my_file)
+    my_nb_node = nba.get_notebook(my_file)
     assert type(my_nb_node) is nbformat.notebooknode.NotebookNode
 
-    """TODO error checking. Should raise an exception."""
+    """Should raise an exception."""
+    with pytest.raises(TypeError):
+        my_nb_node = nba.get_notebook(5)
+
+    """Should raise an exception."""
+    # may require mocking
     # bad_url = "http:/funn.yfdf"
-    # my_nb_node = get_notebook(my_url)
-    # assert raises an error
+    # with pytest.raises(urllib2.URLError):
+    #    my_nb_node = nba.get_notebook(bad_url)
 
 
 def test_write_files():
     """Should run to completion."""
-    my_nb_node = nba.get_notebooks(my_url)
+    my_nb_node = nba.get_notebook(my_url)
     nba.write_files(my_file_types, my_nb_node, file_name="my_file")
+
+    """Should raise an exception."""
+    bad_export_list = ['slides']
+    my_nb_node = nba.get_notebook(my_url)
+    nba.write_files(bad_export_list, my_nb_node, file_name="my_file2")
+    assert pytest.raises(TypeError)
