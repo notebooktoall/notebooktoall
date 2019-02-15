@@ -42,17 +42,23 @@ _________________
 
 * Add requirements to setup.py
 
-0.1.6 (2019-02-11)
+0.1.6 (2019-02-12)
 _________________
 
 * One requirements file
 
-0.1.7 (2019-02-11)
+0.1.7 (2019-02-12)
 _________________
 
 * Fix setup.py
 
-0.1.8 (2019-02-12)
+0.1.8 (2019-02-13)
 _________________
 
 * Update coverage
+
+0.1.9 (2019-02-14)
+_________________
+
+* API change to transform_notebook() from transform_notebooks()
+* More Tests
