@@ -57,7 +57,7 @@ _________________
 
 * Update coverage
 
-0.1.9 (2019-02-14)
+0.2.0 (2019-02-14)
 _________________
 
 * API change to transform_notebook() from transform_notebooks()
