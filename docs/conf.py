@@ -47,7 +47,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'notebooktoall'
+project = u'NotebookToAll'
 copyright = u"2019, Jeff Hale"
 author = u"Jeff Hale"
 

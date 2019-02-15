@@ -55,13 +55,23 @@ def test_get_notebook():
     my_nb_node = nba.get_notebooks(my_file)
     assert type(my_nb_node) is nbformat.notebooknode.NotebookNode
 
-    """TODO error checking. Should raise an exception."""
-    # bad_url = "http:/funn.yfdf"
-    # my_nb_node = get_notebook(my_url)
-    # assert raises an error
+    """Should raise an exception."""
+    bad_url = "http:/funn.yfdf"
+    my_nb_node = nba.get_notebook(bad_url)
+    assert pytest.raises(
+        f"There was a problem exporting the notebook: {bad_url}"
+    )
 
 
 def test_write_files():
     """Should run to completion."""
     my_nb_node = nba.get_notebooks(my_url)
     nba.write_files(my_file_types, my_nb_node, file_name="my_file")
+
+    """Should raise an exception."""
+    bad_export_list = ['slides']
+    my_nb_node = nba.get_notebooks(my_url)
+    nba.write_files(bad_export_list, my_nb_node, file_name="my_file2")
+    assert pytest.raises(
+        f"There was a problem exporting writing the file(s): {bad_export_list}"
+    )
