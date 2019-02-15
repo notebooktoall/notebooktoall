@@ -6,7 +6,7 @@ from nbconvert import HTMLExporter, PythonExporter
 from nbconvert.writers import FilesWriter
 
 
-def get_notebooks(ipynb_file):
+def get_notebook(ipynb_file):
     """
     Convert Jupyter notebook from url or directory to a NotebookNode object.
 
@@ -17,6 +17,8 @@ def get_notebooks(ipynb_file):
         NotebookNode object
 
     """
+    if not isinstance(ipynb_file, str):
+        raise TypeError('Please provide a string argument')
     try:
         if "http" in ipynb_file:
             ipynb_file = urlopen(ipynb_file).read().decode()
@@ -57,16 +59,16 @@ def write_files(export_list, nb_node, file_name):
                 notebook_name=file_name
             )
     except Exception as e:
-        print(f"There was a problem exporting writing the file(s): {e}")
+        print(f"There was a problem exporting the file(s): {e}")
     return None
 
 
-def transform_notebooks(
+def transform_notebook(
     ipynb_file,
     export_list=["html", "py"]
 ):
     """
-    Transform notebooks to specified document types.
+    Transform notebook to specified document types.
 
     Args:
 
@@ -80,7 +82,7 @@ def transform_notebooks(
     file_name = ipynb_file.rsplit('/', 1)[-1]
     file_name = file_name[:file_name.rfind('.')]
 
-    nb_node = get_notebooks(ipynb_file)
+    nb_node = get_notebook(ipynb_file)
     write_files(export_list, nb_node, file_name)
     return None
 
