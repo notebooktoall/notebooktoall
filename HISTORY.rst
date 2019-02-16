@@ -64,7 +64,8 @@ _________________
 * More Tests
 
 0.2.1 (2019-02-15)
-_________________
+__________________
 
 * RTD improvements
-* Fewer packages for install required
+* Fewer packages required for install
+* Doc fixes

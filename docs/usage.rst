@@ -16,4 +16,4 @@ Make sure your notebook doesn't have magic commands in it if you want to create 
 
 Run your code and your .html and .py files should appear in your current working directory.
 
-You can pass a Jupyter notebook url to transform_notebooks().
+You can also pass a Jupyter notebook URL to transform_notebooks().
