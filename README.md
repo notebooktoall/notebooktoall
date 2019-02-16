@@ -31,6 +31,6 @@ Run your code and an .html file and an executable .py file will appear in your c
 
 Ensure your Jupyter notebook doesn't have magic commands in it if you want to create an executable .py script.
 
-You can also pass the url of a Jupyter notebook to transform_notebooks().
+You can also pass the URL of a Jupyter notebook to transform_notebook().
 
 See the full docs at [ReadTheDocs](https://notebooktoall.readthedocs.io/en/latest/index.html).

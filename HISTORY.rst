@@ -62,3 +62,10 @@ _________________
 
 * API change to transform_notebook() from transform_notebooks()
 * More Tests
+
+0.2.1 (2019-02-15)
+__________________
+
+* RTD improvements
+* Fewer packages required for install
+* Doc fixes
