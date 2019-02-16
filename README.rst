@@ -31,7 +31,8 @@ Install
 _______
 
 Install from PyPI.
-`pip install notebooktoall`
+
+    pip install notebooktoall
 
 Use
 ___

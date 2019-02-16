@@ -12,12 +12,10 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
 requirements = [
-    'pip==19.0.2',
-    'wheel==0.33.0',
-    'ipython==7.2.0',
-    'nbformat==4.4.0',
-    'nbconvert==5.4.1',
-    'requests==2.21.0'
+    'ipython>=7',
+    'nbformat>=4',
+    'nbconvert>=5',
+    'requests>=2'
 ]
 
 setup_requirements = ['pytest-runner', ]
