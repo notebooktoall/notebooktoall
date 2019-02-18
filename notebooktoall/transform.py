@@ -4,6 +4,7 @@ from urllib.request import urlopen
 import nbformat
 from nbconvert import HTMLExporter, PythonExporter
 from nbconvert.writers import FilesWriter
+from pathlib import Path
 
 
 def get_notebook(ipynb_file):
@@ -79,13 +80,8 @@ def transform_notebook(
         None
 
     """
-    file_name = ipynb_file.rsplit('/', 1)[-1]
-    file_name = file_name[:file_name.rfind('.')]
+    file_name = Path(ipynb_file).stem
 
     nb_node = get_notebook(ipynb_file)
     write_files(export_list, nb_node, file_name)
     return None
-
-# TODO:
-# Check that ipynb and export_list types are valid
-# possible feature: return the created objects or a message
