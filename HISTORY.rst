@@ -69,3 +69,13 @@ __________________
 * RTD improvements
 * Fewer packages required for install
 * Doc fixes
+
+0.2.2 (2019-02-18)
+__________________
+
+* Simplify structure
+
+0.2.3 (2019-02-18)
+__________________
+
+* Fix docs and package
