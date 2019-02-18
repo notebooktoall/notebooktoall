@@ -12,7 +12,7 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
 requirements = [
-    'ipython>=7',
+    'ipython>=6',
     'nbformat>=4',
     'nbconvert>=5',
     'requests>=2'
@@ -46,6 +46,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/notebooktoall/notebooktoall',
-    version='0.2.1',
+    version='0.2.3',
     zip_safe=False,
 )

@@ -158,7 +158,7 @@ texinfo_documents = [
     (master_doc, 'notebooktoall',
      u'NotebookToAll Documentation',
      author,
-     'notebooktoall',
+     'NotebookToAll',
      'One line description of project.',
      'Miscellaneous'),
 ]
