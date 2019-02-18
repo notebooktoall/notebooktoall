@@ -49,6 +49,10 @@ clean-test: ## remove test and coverage artifacts
 	rm -f .coverage
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
+	rm -f my_test.py
+	rm -f my_test.html
+	rm -f XKCD_plots.py
+	rm -f XKCD_plots.htlm
 
 lint: ## check style with flake8
 	flake8 notebooktoall tests

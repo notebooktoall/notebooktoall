@@ -12,7 +12,7 @@ with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
 requirements = [
-    'ipython>=7',
+    'ipython>=6',
     'nbformat>=4',
     'nbconvert>=5',
     'requests>=2'
