@@ -48,23 +48,23 @@ _________________
 * One requirements file
 
 0.1.7 (2019-02-12)
-_________________
+__________________
 
 * Fix setup.py
 
 0.1.8 (2019-02-13)
-_________________
+__________________
 
 * Update coverage
 
 0.2.0 (2019-02-14)
-_________________
+__________________
 
 * API change to transform_notebook() from transform_notebooks()
 * More Tests
 
 0.2.1 (2019-02-15)
-__________________
+___________________
 
 * RTD improvements
 * Fewer packages required for install
