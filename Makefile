@@ -49,12 +49,16 @@ clean-test: ## remove test and coverage artifacts
 	rm -f .coverage
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
+	rm -f my_test.py
+	rm -f my_test.html
+	rm -f XKCD_plots.py
+	rm -f XKCD_plots.html
 
 lint: ## check style with flake8
 	flake8 notebooktoall tests
 
 test: ## run tests quickly with the default Python
-	py.test
+	python -m  pytest
 
 test-all: ## run tests on every Python version with tox
 	tox
@@ -80,8 +84,7 @@ release: dist ## package and upload a release
 	twine upload dist/*
 
 dist: clean ## builds source and wheel package
-	python setup.py sdist
-	python setup.py bdist_wheel
+	python setup.py sdist bdist_wheel
 	ls -l dist
 
 install: clean ## install the package to the active Python's site-packages
