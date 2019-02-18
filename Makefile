@@ -52,13 +52,13 @@ clean-test: ## remove test and coverage artifacts
 	rm -f my_test.py
 	rm -f my_test.html
 	rm -f XKCD_plots.py
-	rm -f XKCD_plots.htlm
+	rm -f XKCD_plots.html
 
 lint: ## check style with flake8
 	flake8 notebooktoall tests
 
 test: ## run tests quickly with the default Python
-	py.test
+	python -m  pytest
 
 test-all: ## run tests on every Python version with tox
 	tox
