@@ -9,8 +9,8 @@ pytest-cov==2.6.1
 coveralls==1.6.0
 bump2version==0.5.10
 twine==1.13.0
-pip==19.0.2
-wheel==0.33.1
+pip==19.0.3
+wheel==0.33.0
 ipython==7.2.0
 nbformat==4.4.0
 nbconvert==5.4.1
