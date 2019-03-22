@@ -1,5 +1,5 @@
 flake8==3.7.6
-Sphinx==1.8.4
+Sphinx==1.8.5
 sphinx_rtd_theme==0.4.3
 pytest==4.3.0
 pytest-runner==4.4
