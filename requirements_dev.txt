@@ -14,4 +14,4 @@ wheel==0.33.4
 ipython==7.4.0
 nbformat==4.4.0
 nbconvert==5.5.0
-requests==2.21.0
+requests==2.23.0
