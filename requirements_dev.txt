@@ -6,7 +6,7 @@ pytest==5.4.2
 pytest-runner==5.2
 coverage==4.5.3
 pytest-cov==2.8.1
-coveralls==1.7.0
+coveralls==2.1.1
 bump2version==1.0.0
 twine==3.1.1
 pip==20.1
