@@ -13,9 +13,6 @@ NotebookToAll
         :target: https://notebooktoall.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-.. image:: https://pyup.io/repos/github/notebooktoall/notebooktoall/shield.svg
-     :target: https://pyup.io/repos/github/notebooktoall/notebooktoall/
-     :alt: Updates
 
 
 The coolest way to turn a Jupyter Notebook into sharable files.
